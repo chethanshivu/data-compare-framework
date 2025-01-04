@@ -7,8 +7,8 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @ExcelSheet("Data")
-@EqualsAndHashCode(exclude = {"country"})
-public class FileAComponents {
+@EqualsAndHashCode(exclude = {"country"}, callSuper = false)
+public class FileAComponents extends BaseDomainComponents{
 
     @ExcelCellName("name")
     private String name;
